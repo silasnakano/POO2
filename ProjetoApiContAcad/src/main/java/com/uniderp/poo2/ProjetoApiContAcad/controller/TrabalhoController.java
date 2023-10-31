@@ -7,22 +7,23 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.uniderp.poo2.ProjetoApiContAcad.dominio.Professor;
-import com.uniderp.poo2.ProjetoApiContAcad.repositories.ProfessorRepository;
+import com.uniderp.poo2.ProjetoApiContAcad.dominio.Trabalho;
+import com.uniderp.poo2.ProjetoApiContAcad.repositories.TrabalhoRepository;
 
 @RestController
-@RequestMapping(value = "/professor")
-public class ProfessorController {
+@RequestMapping(value = "/trabalho")
+public class TrabalhoController {
 
     @Autowired
-    private ProfessorRepository professorRepository;
-    
+    private TrabalhoRepository trabalhoRepository;
+
     @GetMapping
-    public List<Professor> getObjects() {
-        
-        List<Professor> list = professorRepository.findAll();
+    private List<Trabalho> getObjects() {
+
+        List<Trabalho> list = trabalhoRepository.findAll();
 
         return list;
-    }
 
+    }
+    
 }

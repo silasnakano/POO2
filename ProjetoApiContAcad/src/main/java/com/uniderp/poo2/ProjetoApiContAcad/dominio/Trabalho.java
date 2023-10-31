@@ -9,9 +9,9 @@ import jakarta.persistence.ManyToOne;
 import jakarta.persistence.Table;
 
 @Entity
-@Table(name = "tb_turma")
-public class Turma {
-
+@Table(name = "tb_trabalho")
+public class Trabalho {
+    
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long codigo;
@@ -19,14 +19,8 @@ public class Turma {
     @ManyToOne
     @JoinColumn(name = "disciplina_id")
     private Disciplina disciplina;
-
-    @ManyToOne
-    @JoinColumn(name = "professor_id")
-    private Professor professor;
-
-    @ManyToOne
-    @JoinColumn(name = "aluno_id")
-    private Aluno capacidade;
+    
+    private String descricao;
     
     public Long getCodigo() {
         return codigo;
@@ -44,31 +38,22 @@ public class Turma {
         this.disciplina = disciplina;
     }
 
-    public Professor getProfessor() {
-        return professor;
+    public String getDescricao() {
+        return descricao;
     }
 
-    public void setProfessor(Professor professor) {
-        this.professor = professor;
+    public void setDescricao(String descricao) {
+        this.descricao = descricao;
     }
 
-    public Aluno getCapacidade() {
-        return capacidade;
-    }
-
-    public void setCapacidade(Aluno capacidade) {
-        this.capacidade = capacidade;
-    }
-
-    public Turma() {
+    public Trabalho() {
 
     }
 
-    public Turma(Long codigo, Disciplina disciplina, Professor professor, Aluno capacidade) {
+    public Trabalho(Long codigo, Disciplina disciplina, String descricao) {
         this.codigo = codigo;
         this.disciplina = disciplina;
-        this.professor = professor;
-        this.capacidade = capacidade;
+        this.descricao = descricao;
     }
     
 }
