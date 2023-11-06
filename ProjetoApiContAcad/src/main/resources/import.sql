@@ -6,9 +6,9 @@ INSERT INTO tb_aluno (nome, dataNascimento, periodo, usuario, senha) VALUES ('Af
 INSERT INTO tb_aluno (nome, dataNascimento, periodo, usuario, senha) VALUES ('Viviane', '20/05/2002', '2', 'viviane', 'viviane123');
 INSERT INTO tb_aluno (nome, dataNascimento, periodo, usuario, senha) VALUES ('Gaspar', '15/02/2000', '6', 'gaspar', 'gaspar123');
 
-INSERT INTO tb_disiciplina (nome, ementa) VALUES ('Física', 'ementa01');
-INSERT INTO tb_disiciplina (nome, ementa) VALUES ('Matemática', 'ementa02');
-INSERT INTO tb_disiciplina (nome, ementa) VALUES ('História', 'ementa03');
+INSERT INTO tb_disciplina (nome, ementa) VALUES ('Física', 'ementa01');
+INSERT INTO tb_disciplina (nome, ementa) VALUES ('Matemática', 'ementa02');
+INSERT INTO tb_disciplina (nome, ementa) VALUES ('História', 'ementa03');
 
 INSERT INTO tb_nota_trabalho (nota) VALUES (6,7);
 INSERT INTO tb_nota_trabalho (nota) VALUES (5,5);
